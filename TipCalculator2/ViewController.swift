@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UIViewController, UITextFieldDelegate{
   
   var billAmountDisplay: Int = 0
   var billAmount: Double = 0
@@ -23,9 +23,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     billAmountTextField.delegate = self
     billAmountTextField.placeholder = updateAmount()
-
+    
+    initDisplay()
   }
   
+  func initDisplay() {
+    //Start value for tip and total amount formated to local currency
+    tipAmountLabel.text = formatCurrency(0.00)
+    totalLabel.text = formatCurrency(0.00)
+  }
   
   //Format bill amount as entered by user
   func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -42,11 +48,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
   }
 
   func updateAmount() -> String? {
-    let formatter = NumberFormatter()
-    formatter.numberStyle = NumberFormatter.Style.currency
     let amount = Double(billAmountDisplay/100) + Double(billAmountDisplay%100)/100
     billAmount = amount
-    return formatter.string(from: NSNumber(value:amount))
+    return formatCurrency(amount)
   }
 
   @IBAction func calculateTip(_ sender: Any) {
@@ -55,13 +59,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
     let tip = billAmount * tipPercentages[tipControl.selectedSegmentIndex]
     let total = billAmount + tip
   
-    
     //Update Tip Amount Label
-    tipAmountLabel.text = String(format: "%.2f", tip)
+    tipAmountLabel.text = formatCurrency(tip)
     
     //Update total amount
-    totalLabel.text = String(format: "%.2f", total)
-    
+    totalLabel.text = formatCurrency(total)
   }
 }
 

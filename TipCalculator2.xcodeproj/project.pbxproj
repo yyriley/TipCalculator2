@@ -15,6 +15,7 @@
 		6A020B59264B39D100037F5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A020B57264B39D100037F5A /* LaunchScreen.storyboard */; };
 		6A020B64264B39D100037F5A /* TipCalculator2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A020B63264B39D100037F5A /* TipCalculator2Tests.swift */; };
 		6A020B6F264B39D100037F5A /* TipCalculator2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A020B6E264B39D100037F5A /* TipCalculator2UITests.swift */; };
+		6A0E76B4264E36B100F40004 /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0E76B3264E36B100F40004 /* CurrencyFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		6A020B6A264B39D100037F5A /* TipCalculator2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TipCalculator2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A020B6E264B39D100037F5A /* TipCalculator2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipCalculator2UITests.swift; sourceTree = "<group>"; };
 		6A020B70264B39D100037F5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A0E76B3264E36B100F40004 /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				6A020B55264B39D100037F5A /* Assets.xcassets */,
 				6A020B57264B39D100037F5A /* LaunchScreen.storyboard */,
 				6A020B5A264B39D100037F5A /* Info.plist */,
+				6A0E76B3264E36B100F40004 /* CurrencyFormatter.swift */,
 			);
 			path = TipCalculator2;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A020B51264B39D000037F5A /* ViewController.swift in Sources */,
+				6A0E76B4264E36B100F40004 /* CurrencyFormatter.swift in Sources */,
 				6A020B4D264B39D000037F5A /* AppDelegate.swift in Sources */,
 				6A020B4F264B39D000037F5A /* SceneDelegate.swift in Sources */,
 			);
